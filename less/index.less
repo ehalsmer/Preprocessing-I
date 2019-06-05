@@ -53,6 +53,11 @@ table {
     box-sizing: border-box;
 }
 
+@color0: #ECF4EF;
+@color1: #928d90;
+@color2: #302f30;
+@color3: #302f30;
+
 html, body {
 	height: 100%;
 	font-size: 62.5%;
@@ -76,7 +81,7 @@ header {
 		a {
 			font-size: 1.5rem;
 			text-decoration: none;
-			color: #928d90;
+			color: @color1;
 			padding: 10px 20px;
 			@media (max-width: 800px){
 				font-size: 1.4rem;
@@ -87,7 +92,7 @@ header {
 h3 {
 	font-size: 1.5rem;
 	padding-top: 1rem;
-	color: #302f30;
+	color: @color2;
 	@media (max-width: 800px){
 		font-size: 1.3rem;
 	}
@@ -95,21 +100,24 @@ h3 {
 h2 {
 	font-size: 2.5rem;
 	padding-top: 1rem;
-	color: #302f30;
+	color: @color2;
 	@media (max-width: 800px){
 		font-size: 1.5rem;
 	}
 }
 .top-section {
-	background-color: #ECF4EF;
+	background-color: @color0;
 	padding: 40px;
 	@media (max-width: 800px){
 		padding: 30px;
 	}
+	@media (max-width: 600px){
+		padding: 1rem;
+	}
 	h1 {
 		font-size: 3.5rem;
 		padding-top: 1.5rem;
-		color: #302f30;
+		color: @color3;
 		@media (max-width: 800px){
 			font-size: 3rem;
 		}
@@ -124,7 +132,7 @@ h2 {
 		color: #c3bcc0;
 	}
 	.tagline {
-		color: #928d90;
+		color: @color1;
 	}
 	hr {
 		margin: 30px 0px;
@@ -143,11 +151,18 @@ h2 {
 	padding: 20px 0px;
 	display: flex;
 	justify-content: space-between;
+	@media (max-width: 600px){
+		flex-direction: column;
+		align-items: center;
+	}
 	.middle-left {
 		padding-left: 5px;
 	}
 	div {
 		width: 45%;
+		@media (max-width: 600px){
+			width: 100%;
+		}
 		p {
 			font-size: 1.2rem;
 			padding-top: 15px;
